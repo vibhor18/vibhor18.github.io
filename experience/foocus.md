@@ -13,4 +13,4 @@ PayTM is India's Largest Digital Finance Company.
 - Django
 <br>
 
-**[<i class="fa-solid fa-circle-info"></i> Learn More](https://prathamgupta.github.io/pages/experience.html)**
+**[<i class="fa-solid fa-circle-info"></i> Learn More](../pages/experience.html)**
