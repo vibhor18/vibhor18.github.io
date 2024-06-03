@@ -4,12 +4,13 @@ PayTM is India's Largest Digital Finance Company.
 
 **Position:** Software Developer
 
-### Top Skills:
+## Top Skills:
 
 - Java
 - Python
 - C++
 - Flask
 - Django
+<br>
 
-**[<i class="fa-solid fa-fire"></i> Check it out](https://github.com/lllyasviel/Fooocus)**
+**[<i class="fa-solid fa-circle-info"></i> Learn More](https://prathamgupta.github.io/pages/experience.html)**
