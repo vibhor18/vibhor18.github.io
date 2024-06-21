@@ -128,7 +128,7 @@
       });
     </script>
     <div id="listening-container" class="w-full px-4 py-5">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fab fa-spotify"></i> What's on my Playlist</h3>
+      <h3 class="text-2xl font-semibold mb-4"><i class="fab fa-linkedin"></i> What's on my LinkedIn</h3>
       <div id="listening-list" class="flex flex-wrap mx-auto md:-mx-2 md:space-x-4">
         <!-- Fetched Listening Markdown files will be displayed here -->
       </div>
@@ -146,7 +146,7 @@
       tables: true,
     });
     const baseUrl = "https://api.github.com/repos/prathamgupta/prathamgupta.github.io/contents/";
-    const folders = ['posts', 'projects', 'listening', 'experience'];
+    const folders = ['posts', 'projects', 'linkedin', 'experience'];
 
     async function fetchMarkdownFiles(folder) {
       const response = await fetch(`${baseUrl}${folder}`);
