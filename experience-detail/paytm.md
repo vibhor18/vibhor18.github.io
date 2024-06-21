@@ -1,10 +1,6 @@
 # Software Developer 
-
-<div style="text-align: right;">
-This text will be aligned to the right.
-</div>
-
 **PayTM** - India's Largest Digital Finance Company.
+Jun 2022 - Aug 2023
 <br>
 
 **Top Skills:** Java, JavaScript, Python, Django, Github, Jenkins, GitHub, SQL, Postman, Agile, Graphana, Kafka, Sharding Spheres, Spring Boot, Data Transfer Objects (DTOs)

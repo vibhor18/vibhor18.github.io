@@ -1,11 +1,16 @@
-# PayTM
-PayTM is India's Largest Digital Finance Company.
+# Software Developer 
+**PayTM** - India's Largest Digital Finance Company.
+Jun 2022 - Aug 2023
 <br>
 
-**Position:** Software Developer
+**Top Skills:** Java, JavaScript, Python, Django, Github, Jenkins, GitHub, SQL, Postman, Agile, Graphana, Kafka, Sharding Spheres, Spring Boot, Data Transfer Objects (DTOs)
+<br>
 
-**Top Skills:** Java, JavaScript, Python, Django, Github, Jenkins, GitHub, SQL, Postman, Agile, Graphana
+**Department:** Unified Payments Interface (UPI)
 
-**Duties:** I did ...**[Learn More](../pages/experience.html)**
+**Description:** Implemented and refined transaction processing code for the 3DS 2.0 policy, enhancing security and efficiency for UPI payments, now widely used in MPGS transactions as of July 2023. As a developer on the Affordability Transactional team for Paytm Payments, I utilized Kafka, Sharding Spheres, Spring Boot, and DTOs to optimize performance. Fixed a critical tokenization bug impacting third-party app payments, ensuring minimal business loss and maintaining transaction reliability.
+
+
+**[Read More](../pages/experience.html)**
 
 <!-- **[<i class="fa-solid fa-circle-info"></i> Learn More](../pages/experience.html)** -->
