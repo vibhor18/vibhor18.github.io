@@ -1,10 +1,7 @@
-# Software Developer 
+# Software Developer
 
-<div style="text-align: right;">
-This text will be aligned to the right.
-</div>
-
-**PayTM** - India's Largest Digital Finance Company.
+## PayTM
+PayTM is India's Largest Digital Finance Company.
 <br>
 
 **Top Skills:** Java, JavaScript, Python, Django, Github, Jenkins, GitHub, SQL, Postman, Agile, Graphana, Kafka, Sharding Spheres, Spring Boot, Data Transfer Objects (DTOs)
