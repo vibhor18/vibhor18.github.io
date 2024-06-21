@@ -1,9 +1,6 @@
-# Software Developer 
-**PayTM** - India's Largest Digital Finance Company.
-Jun 2022 - Aug 2023
-<br>
-
-**Top Skills:** Java, JavaScript, Python, Django, Github, Jenkins, GitHub, SQL, Postman, Agile, Graphana, Kafka, Sharding Spheres, Spring Boot, Data Transfer Objects (DTOs)
+# Experience Executive
+**TEDxIIITD**
+Nov 2019 - Mar 2020
 <br>
 
 **Department:** Unified Payments Interface (UPI)
