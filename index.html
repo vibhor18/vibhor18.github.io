@@ -192,7 +192,7 @@
             }
           } else {
             if (folder !== 'listening') {
-              const hiddenCard = `<div class='hidden'>${fileCard}</div>`;
+              const hiddenCard = `<div class='hidden unhidden'>${fileCard}</div>`;
               if (folder === 'posts') {
                 postsList.innerHTML += hiddenCard;
               } else if (folder === 'projects') {
@@ -224,6 +224,23 @@
             const hiddenItems = container.querySelectorAll('.hidden');
             hiddenItems.forEach(item => item.classList.remove('hidden'));
             button.remove();
+            createShowLessButton(container);
+        });
+    };
+
+        const createShowLessButton = (container) => {
+        const button = document.createElement('button');
+        button.innerHTML = '➕ Show Less';
+        button.classList.add('show-less');
+        button.style.color = 'gray'; // Set the text color to gray
+        button.style.marginTop = '10px'; // Add some margin on top
+        container.after(button);
+
+        button.addEventListener('click', () => {
+            const hiddenItems = container.querySelectorAll('.unhidden');
+            hiddenItems.forEach(item => item.classList.add('hidden'));
+            button.remove();
+            createShowMoreButton(container);
         });
     };
 
