@@ -68,7 +68,7 @@
   <div id="particles-js"></div>
 <nav class="p-4 flex flex-wrap items-center justify-between w-full px-2 md:px-4">
     <div>
-      <span class="text-black font-bold"><a href="https://prathamgupta.github.io/files/Resume.pdf">Resume</a></span><span class="text-black"></span>
+      <span class="text-black font-bold"><a href="https://vibhor18.github.io/files/Resume.pdf">Resume</a></span><span class="text-black"></span>
     </div>
     <div>
       <span class="text-black font-bold"><a href="https://vibhor18.github.io/">Vibhor Mechu</a></span><span class="text-black"></span>
@@ -132,7 +132,7 @@
 
       const fetchExperienceDetail = async (experienceId) => {
         const folder = 'experience-detail';
-        const baseUrl = "https://api.github.com/repos/prathamgupta/prathamgupta.github.io/contents/";
+        const baseUrl = "https://api.github.com/repos/vibhor18/vibhor18.github.io/contents/";
         const response = await fetch(`${baseUrl}${folder}/${experienceId}.md`);
         const converter = new showdown.Converter({simpleLineBreaks: true, strikethrough: true, tables: true});
         if (response.ok) {
@@ -162,7 +162,7 @@
       strikethrough: true,
       tables: true,
     });
-    const baseUrl = "https://api.github.com/repos/prathamgupta/prathamgupta.github.io/contents/";
+    const baseUrl = "https://api.github.com/repos/vibhor18/vibhor18.github.io/contents/";
     const folders = ['experience-detail'];
 
     async function fetchMarkdownFiles(folder) {
