@@ -132,7 +132,9 @@
 
       const fetchExperienceDetail = async (experienceId) => {
         const folder = 'experience-detail';
+        const baseUrl = "https://api.github.com/repos/prathamgupta/prathamgupta.github.io/contents/";
         const response = await fetch(`${baseUrl}${folder}/${experienceId}.md`);
+        const converter = new showdown.Converter({simpleLineBreaks: true, strikethrough: true, tables: true});
         if (response.ok) {
           const mdContent = await response.text();
           const htmlContent = converter.makeHtml(mdContent);
