@@ -86,15 +86,30 @@
     </div>
   </div>
   <div id="content-container" class="flex flex-col md:flex-row w-full flex-wrap mt-6 mb-20 mx-1 md:mx-0 justify-center">
-    
     <div id="experience-container" class="w-full md:w-2/3 px-4 py-5 mb-5 md:mb-0 justify-center">
       <div id="experience-list" class="gap-4 flex-wrap">
-        <!-- Fetched Experience Markdown files will be displayed here -->
+        <div class="experience-item cursor-pointer" id="tedx">
+          <h2 class="text-xl font-semibold mb-2">TEDx</h2>
+        </div>
+        <div class="experience-item cursor-pointer" id="protiviti">
+          <h2 class="text-xl font-semibold mb-2">Protiviti</h2>
+        </div>
+        <div class="experience-item cursor-pointer" id="symphonyAI">
+          <h2 class="text-xl font-semibold mb-2">SymphonyAI</h2>
+        </div>
+        <div class="experience-item cursor-pointer" id="ecega">
+          <h2 class="text-xl font-semibold mb-2">ECEGA</h2>
+        </div>
+        <div class="experience-item cursor-pointer" id="paytm">
+          <h2 class="text-xl font-semibold mb-2">PayTM</h2>
+        </div>
+        <div class="experience-item cursor-pointer" id="ampviv">
+          <h2 class="text-xl font-semibold mb-2">Ampviv</h2>
+        </div>
+        <!-- Add other experiences similarly -->
       </div>
     </div>
-
-
-
+    <div id="experience-detail-container" class="w-full md:w-2/3 px-4 py-5 mb-5 md:mb-0"></div>
   </div>
     <script>
       document.getElementById("dark-mode-toggle").addEventListener("click", () => {
@@ -105,6 +120,36 @@
   
         toggleBtn.innerText = isDarkModeOn ? "☀️" : "🌓";
       });
+
+      document.addEventListener("DOMContentLoaded", () => {
+      const experienceItems = document.querySelectorAll(".experience-item");
+      experienceItems.forEach(item => {
+        item.addEventListener("click", () => {
+          const experienceId = item.id;
+          fetchExperienceDetail(experienceId);
+        });
+      });
+
+      const fetchExperienceDetail = async (experienceId) => {
+        const folder = 'experience-detail';
+        const response = await fetch(`${baseUrl}${folder}/${experienceId}.md`);
+        if (response.ok) {
+          const mdContent = await response.text();
+          const htmlContent = converter.makeHtml(mdContent);
+          document.getElementById('experience-detail-container').innerHTML = `
+            <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100">
+              ${htmlContent}
+            </div>
+          `;
+        } else {
+          document.getElementById('experience-detail-container').innerHTML = `
+            <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100">
+              <p>Details not available.</p>
+            </div>
+          `;
+        }
+      };
+    });
     </script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
