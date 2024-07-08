@@ -1,12 +1,10 @@
-# Software Developer 
-**PayTM** - India's Largest Digital Finance Company.
-Jun 2022 - Aug 2023
+# Machine Learning and Automation Intern
+**Central Manufacturing Technology Institute** 
+Jun 2021 - Sep 2021
 <br>
 
-**Department:** Unified Payments Interface (UPI)
-<br>
 
-**Description:** Implemented and refined transaction processing code for the 3DS 2.0 policy, enhancing security and efficiency for UPI payments, now widely used in MPGS transactions as of July 2023. As a developer on the Affordability Transa
+**Description:** Engaged in optimizing manufacturing operations using advanced machine learning and automation techniques. Applied reinforcement learning on Gazebo for robot simulation, developed an IoT-based predictive maintenance system using time series analysis and PLC integration, and automated manufacturing processes to enhance productivity and reliability.
 <br>
 
 **[Read More](../pages/experience.html)**

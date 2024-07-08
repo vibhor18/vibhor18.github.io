@@ -1,12 +1,11 @@
-# Graduate Assistant
-**NYU : ECE Department**
-May 2024 - Aug 2024
+# Software Developer Intern
+**Ericsson**
+Jan 2022 - Jul 2022
 <br>
 
-**Department:** Unified Payments Interface (UPI)
-<br>
 
-**Description:** Implemented and refined transaction processing code for the 3DS 2.0 policy, 
+
+**Description:** Addressed network caching issues and optimized algorithms to improve system performance for META (Facebook) Network Appliances. Designed a Python-based crash reporting system and collaborated in an Agile environment to enhance application stability and reduce system downtime.
 <br>
 
 **[Read More](../pages/experience.html)**

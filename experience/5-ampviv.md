@@ -1,12 +1,10 @@
-# Research Intern
-**AmpViv Healthcare**
-Sep 2020 - Mar 2021
+# Machine Learning Intern
+**Verzeo**
+Feb 2020 - Mar 2020
 <br>
 
-**Department:** Unified Payments Interface (UPI)
-<br>
 
-**Description:** Implemented and refined transaction processing code for the 3DS 2.0 policy, enhancing security and efficiency for UPI payments, now widely used in MPGS transactions as of July 2023. As a developer on the Affordability Transactional team for Paytm Payments, I utilized Kafka, Sharding Spheres, Spring Boot, and DTOs to optimize performance. 
+**Description:** Utilized Python-based data analytics, machine learning, and AI techniques to analyze large datasets. Conducted exploratory data analysis, developed classification models (K-NN, SVM, Logistic Regression), and implemented price prediction algorithms. Achieved significant improvements in data-driven decision-making and predictive accuracy. 
 <br>
 
 **[Read More](../pages/experience.html)**
