@@ -1,56 +1,44 @@
-# Software Developer Intern
-**Ericsson** - Leading Provider of Information and Communication Technology
-Jan 2022 - Jul 2022
+# Machine Learning and Automation Intern
+**Central Manufacturing Technology Institute**
+Jun 2021 – Sep 2021
 <br>
 
-**Network Caching Issues and Performance Enhancement:**
+**Simulation and Optimization:**
 <br>
 
-- **Analyzing Existing Algorithms:** Examined algorithms for caching and data handling, identified bottlenecks, and inefficiencies impacting system performance. Focused on algorithms involving hash maps and arrays to improve lookup times and reduce latency.
+- **Reinforcement Learning for Robot Simulation:** Applied reinforcement learning techniques to simulate a universal robot on the Gazebo platform using Python. The virtual representation allowed for testing and optimizing the robot's movements, reducing the need for physical trials.
 
 
-- **Implementing Optimization Techniques:** Applied techniques such as reducing time complexity from O(n^2) to O(n log n) by optimizing sorting algorithms. Improved data structures by replacing linear searches with binary search trees and hash tables.
+- **Operational Efficiency:** Transformed manufacturing problems into software solutions, resulting in a 10% decrease in human error. The simulation enabled precise adjustments and validation of the robot's operations before real-world implementation.
 
-
-- **Collaboration:** Worked closely with the ISP collaboration team to ensure optimized algorithms aligned with network requirements and enhanced user experience. Coordinated with ISP partners to implement and test these optimizations.
 
 <br>
 
-**Crash Reporting System:**
+**IoT-Based Predictive Maintenance System**
 <br>
 
-- **Development:** Led the design and implementation of an advanced crash reporting system using Python for backend development. Utilized libraries such as Pandas and NumPy for data handling and analysis
+- **Abrasive Flow Machine Automation:** Programmed an IoT-based predictive maintenance system for an abrasive flow machine with PLC integration. The system was designed to enhance the machine's reliability and reduce maintenance costs.
 
 
-- **Data Analysis:** Analyzed crash data to identify underlying issues, using statistical methods and visualization tools like Matplotlib and Seaborn. Debugged and refined code based on analysis results.
+- **Time Series Analysis:** Utilized time series analysis to monitor and automate the machine's functions, increasing reliability by 15%.
 
-
-- **Outcome:** Achieved a 35% improvement in application stability and service quality by identifying and resolving frequent crash causes.
 <br>
 
-**Incident Management and Automation:**
+**Automation and Process Improvement:**
 <br>
 
-- **Incident Tracking:** Managed Break & Fix incidents in partnership with OEM vendors and ISPs, using tools like OTRS, MITo, and FTAR for incident management. Maintained detailed logs and records of each incident.
+- **Software Solutions for Manufacturing:** Developed use cases and data models to streamline manufacturing processes, leading to a 35% reduction in cycle time.
 
-- **Automated Communication:** Developed scripts to automate initial communications with ISPs for incidents. Used Python's smtplib for email automation, streamlining the process and minimizing response times.
+- **Python:** Crafted software solutions to automate key manufacturing processes, significantly enhancing productivity and operational efficiency.
 <br>
 
-**Data Extraction and Reporting:**
+**Operational Monitoring and Reporting:**
 <br>
 
-- **Script Development:** Created Python scripts to automate data extraction from service management tools and databases. Used SQL queries for data retrieval and integrated with Pandas for data manipulation.
+- **Data Collection and Analysis:** Implemented data collection systems to monitor manufacturing operations continuously. Analyzed data to identify bottlenecks and optimize processes.
 
-- **Reporting:** Designed comprehensive reports to analyze trends in incidents, using tools like Tableau for visualization and reporting. Provided actionable insights to management for improving operational efficiency.
+- **Reporting:** Developed detailed reports to track performance improvements and provide actionable insights to management, ensuring continuous improvement in manufacturing efficiency.
 <br>
 
-**Collaboration in Agile Environment:**
-<br>
-
-- **Team Collaboration:** Worked closely with the **Facebook Network Appliance** team in an Agile development environment. Participated in daily stand-ups, sprint planning, and retrospectives to ensure effective communication and project progress.
-
-- **Issue Resolution:** Diagnosed and resolved critical software issues using Ericsson service management tools. Implemented fixes and improvements, resulting in a 10% reduction in system downtime over six months.
-<br>
-
-- **Outcome:** Gained valuable skills in incident management, algorithm optimization, and ISP collaboration, contributing significantly to maintaining system stability and enhancing performance. This role developed technical skills in software development, incident management, and data analysis, making a well-rounded candidate for future software engineering positions.
+- **Outcome:** Gained valuable experience in applying machine learning, IoT, and automation techniques to real-world manufacturing problems. This role enhanced my skills in Python programming, simulation, process optimization, and operational monitoring, contributing to improved productivity and efficiency in manufacturing operations.
 <!-- **[<i class="fa-solid fa-circle-info"></i> Learn More](../pages/experience.html)** -->

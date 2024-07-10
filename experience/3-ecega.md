@@ -5,7 +5,7 @@ Jan 2022 - Jul 2022
 
 
 
-**Description:** Addressed network caching issues and optimized algorithms to improve system performance for META (Facebook) Network Appliances. Designed a Python-based crash reporting system and collaborated in an Agile environment to enhance application stability and reduce system downtime.
+**Description:** Addressed network caching issues and optimized algorithms to improve system performance for **META (Facebook)** Network Appliances. Designed a Python-based crash reporting system and collaborated in an Agile environment to enhance application stability and reduce system downtime.
 <br>
 
 **[Read More](../pages/experience.html)**

@@ -19,7 +19,7 @@ Jan 2022 - Jul 2022
 **Crash Reporting System:**
 <br>
 
-- **Development:** Led the design and implementation of an advanced crash reporting system using Python for backend development. Utilized libraries such as Pandas and NumPy for data handling and analysis
+- **Development:** Led the design and implementation of an advanced crash reporting system using Python for backend development. Utilized libraries such as Pandas and NumPy for data handling and analysis.
 
 
 - **Data Analysis:** Analyzed crash data to identify underlying issues, using statistical methods and visualization tools like Matplotlib and Seaborn. Debugged and refined code based on analysis results.
