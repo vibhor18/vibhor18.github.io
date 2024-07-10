@@ -1,65 +1,56 @@
-# Software Developer 
-**PayTM** - India's Largest Digital Finance Company.
-Jun 2022 - Aug 2023
+# Software Developer Intern
+**Ericsson** - Leading Provider of Information and Communication Technology
+Jan 2022 - Jul 2022
 <br>
 
-**Top Skills:** Java, JavaScript, Python, Django, Github, Jenkins, GitHub, SQL, Postman, Agile, Graphana, Kafka, Sharding Spheres, Spring Boot, Data Transfer Objects (DTOs)
+**Network Caching Issues and Performance Enhancement:**
 <br>
 
-**Department:** Unified Payments Interface (UPI)
+- **Analyzing Existing Algorithms:** Examined algorithms for caching and data handling, identified bottlenecks, and inefficiencies impacting system performance. Focused on algorithms involving hash maps and arrays to improve lookup times and reduce latency.
+
+
+- **Implementing Optimization Techniques:** Applied techniques such as reducing time complexity from O(n^2) to O(n log n) by optimizing sorting algorithms. Improved data structures by replacing linear searches with binary search trees and hash tables.
+
+
+- **Collaboration:** Worked closely with the ISP collaboration team to ensure optimized algorithms aligned with network requirements and enhanced user experience. Coordinated with ISP partners to implement and test these optimizations.
+
 <br>
 
-**Implementation and Refinement of 3DS 2.0 Policy Code:**
+**Crash Reporting System:**
 <br>
 
-- **Development:** Designed and implemented the transaction processing code to comply with the 3DS 2.0 policy, focusing on enhancing authentication and fraud prevention mechanisms.
+- **Development:** Led the design and implementation of an advanced crash reporting system using Python for backend development. Utilized libraries such as Pandas and NumPy for data handling and analysis
 
 
-- **Collaboration:** Worked closely with policy experts and cross-functional teams to understand and incorporate the new policy requirements into the existing payment infrastructure.
+- **Data Analysis:** Analyzed crash data to identify underlying issues, using statistical methods and visualization tools like Matplotlib and Seaborn. Debugged and refined code based on analysis results.
 
 
-- **Testing and Validation:** Conducted extensive testing, including unit tests, integration tests, and user acceptance tests, to ensure the robustness and reliability of the new implementation.
-
-
-- **Deployment:** Managed the deployment process, ensuring a smooth transition to the new system with minimal disruption to existing services.
-
-
-- **Outcome:** Completed the development within strict and fast deadlines, resulting in a reliable and secure implementation that is now used by most MPGS payment transactions adhering to the 3DS 2.0 policy as of July 2023.
+- **Outcome:** Achieved a 35% improvement in application stability and service quality by identifying and resolving frequent crash causes.
 <br>
 
-**Development on the Affordability Transactional Team for Paytm Payments:**
+**Incident Management and Automation:**
 <br>
 
-- **Backend Development:** Built and maintained a robust backend infrastructure to support high-volume, real-time payment transactions.
+- **Incident Tracking:** Managed Break & Fix incidents in partnership with OEM vendors and ISPs, using tools like OTRS, MITo, and FTAR for incident management. Maintained detailed logs and records of each incident.
 
-
-- **Scalability:** Implemented sharding strategies using Sharding Spheres to optimize database performance, ensuring the system's ability to handle a growing number of transactions.
-
-
-- **Real-Time Processing:** Utilized Kafka for efficient message brokering and real-time data processing, ensuring timely and reliable transaction handling.
-
-
-- **Application Development:** Employed Spring Boot to create scalable and maintainable web applications, streamlining the development process.
-
-
-- **Data Management:** Managed data flow and transformation using DTOs, ensuring seamless integration and communication between different services within the platform.
+- **Automated Communication:** Developed scripts to automate initial communications with ISPs for incidents. Used Python's smtplib for email automation, streamlining the process and minimizing response times.
 <br>
 
-**Bug Fixing and Issue Resolution:**
+**Data Extraction and Reporting:**
 <br>
 
-- **Bug Identification:** Diagnosed and identified a significant bug related to the tokenization process, which was causing payment failures for third-party apps.
+- **Script Development:** Created Python scripts to automate data extraction from service management tools and databases. Used SQL queries for data retrieval and integrated with Pandas for data manipulation.
 
+- **Reporting:** Designed comprehensive reports to analyze trends in incidents, using tools like Tableau for visualization and reporting. Provided actionable insights to management for improving operational efficiency.
+<br>
 
-- **Troubleshooting:** Collaborated with quality assurance and support teams to isolate the root cause of the issue, performing detailed analysis and troubleshooting.
+**Collaboration in Agile Environment:**
+<br>
 
+- **Team Collaboration:** Worked closely with the **Facebook Network Appliance** team in an Agile development environment. Participated in daily stand-ups, sprint planning, and retrospectives to ensure effective communication and project progress.
 
-- **Implementation:** Developed and tested a fix for the tokenization bug, ensuring it resolved the problem without introducing new issues.
+- **Issue Resolution:** Diagnosed and resolved critical software issues using Ericsson service management tools. Implemented fixes and improvements, resulting in a 10% reduction in system downtime over six months.
+<br>
 
-
-- **Deployment:** Deployed the fix with minimal downtime, coordinating with relevant teams to ensure a smooth rollout and minimal disruption to users.
-
-
-- **Outcome:** Successfully resolved the tokenization issue, restoring the reliability of payment transactions for third-party apps and minimizing business loss, thereby maintaining customer trust and satisfaction.
-
+- **Outcome:** Gained valuable skills in incident management, algorithm optimization, and ISP collaboration, contributing significantly to maintaining system stability and enhancing performance. This role developed technical skills in software development, incident management, and data analysis, making a well-rounded candidate for future software engineering positions.
 <!-- **[<i class="fa-solid fa-circle-info"></i> Learn More](../pages/experience.html)** -->
