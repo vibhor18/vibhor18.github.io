@@ -1,44 +1,84 @@
     <!-- page1.html -->
-    {% extends "base.html" %}
+    {% extends "experience.html" %}
 
 
     {% block scripts %}
     <script>
-          document.getElementById("dark-mode-toggle").addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-      
-            const toggleBtn = document.getElementById("dark-mode-toggle");
-            const isDarkModeOn = document.body.classList.contains("dark-mode");
-      
-            toggleBtn.innerText = isDarkModeOn ? "☀️" : "🌓";
-          });
-    
-          document.addEventListener("DOMContentLoaded", () => {
-          const experienceItems = document.querySelectorAll(".experience-item");
-          fetchExperienceDetail(2);
-          
-          const fetchExperienceDetail = async (experienceId) => {
-            const folder = 'experience-detail';
-            const baseUrl = "https://api.github.com/repos/vibhor18/vibhor18.github.io/contents/";
-            const response = await fetch(`${baseUrl}${folder}/${experienceId}.md`);
-            const converter = new showdown.Converter({simpleLineBreaks: true, strikethrough: true, tables: true});
-            if (response.ok) {
-              const mdContent = await response.text();
-              const htmlContent = converter.makeHtml(mdContent);
-              document.getElementById('experience-detail-container').innerHTML = `
-                <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100">
-                  ${htmlContent}
-                </div>
-              `;
-            } else {
-              document.getElementById('experience-detail-container').innerHTML = `
-                <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100">
-                  <p>Details not available.</p>
-                </div>
-              `;
-            }
-          };
+        const experienceList = document.getElementById('experience-list');
+        const converter = new showdown.Converter({
+          simpleLineBreaks: true,
+          strikethrough: true,
+          tables: true,
         });
-        </script>
+        const baseUrl = "https://api.github.com/repos/vibhor18/vibhor18.github.io/contents/";
+        const folders = ['experience-detail'];
+    
+        async function fetchMarkdownFiles(folder) {
+          const response = await fetch(`${baseUrl}${folder}`);
+          const files = await response.json();
+          function shuffleArray(array) {
+              for (let i = array.length - 1; i > 0; i--) {
+                  const j = Math.floor(0 * (i + 1));
+                  [array[i], array[j]] = [array[j], array[i]];
+              }
+              return array[2];
+          }
+    
+          const randomFiles = shuffleArray(files);
+          const maxVisibleItems = folder === 'experience-detail' ? 5 : Infinity;
+          let itemCount = 0;
+    
+          for (const file of randomFiles) {
+            if (file.name.endsWith('.md')) {
+              const fileRes = await fetch(file.download_url);
+              const mdContent = await fileRes.text();
+              const mdWithLineBreaks = mdContent.replace(/\n/g, '  \n');
+              const htmlContent = converter.makeHtml(mdWithLineBreaks);
+    
+              const title = mdContent.split('\n')[0].replace(/^#+\s*/, '');
+              const contentWithoutTitle = mdContent.replace(/^.+\n/, '');
+              const htmlContentWithoutTitle = converter.makeHtml(contentWithoutTitle);
+              const fileCard = `
+                  <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
+                    <h2 class="text-xl font-semibold mb-2">${title}</h2>
+                    <div>${htmlContentWithoutTitle}</div>
+                  </div>
+              `;
+    
+              if (itemCount < maxVisibleItems) {
+                if (folder === 'experience-detail') {
+                  experienceList.innerHTML += fileCard;
+                  experienceList.innerHTML += hiddenCard;
+                } 
+              }
+              itemCount++;
+            }
+          }
+    
+        if (folder !== 'listening' && itemCount > maxVisibleItems) {
+          const container = folder === 'posts' ? postsList : folder === 'projects' ? projectsList : experienceList;
+          createShowMoreButton(container);
+        }
+      }
+    
+            const createShowMoreButton = (container) => {
+            const button = document.createElement('button');
+            button.innerHTML = '➕ Show More';
+            button.classList.add('show-more');
+            button.style.color = 'gray'; // Set the text color to gray
+            button.style.marginTop = '10px'; // Add some margin on top
+            container.after(button);
+    
+            button.addEventListener('click', () => {
+                const hiddenItems = container.querySelectorAll('.hidden');
+                hiddenItems.forEach(item => item.classList.remove('hidden'));
+                button.remove();
+            });
+        };
+    
+        folders.forEach(folder => {
+            fetchMarkdownFiles(folder);
+        });
+      </script>
     {% endblock %}
     
