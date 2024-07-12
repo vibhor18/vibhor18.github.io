@@ -1,0 +1,48 @@
+    <!-- page1.html -->
+{% extends "base.html" %}
+
+
+{% block scripts %}
+<script>
+      document.getElementById("dark-mode-toggle").addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+  
+        const toggleBtn = document.getElementById("dark-mode-toggle");
+        const isDarkModeOn = document.body.classList.contains("dark-mode");
+  
+        toggleBtn.innerText = isDarkModeOn ? "☀️" : "🌓";
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+      const experienceItems = document.querySelectorAll(".experience-item");
+      experienceItems.forEach(item => {
+        item.addEventListener("click", () => {
+          const experienceId = item.id;
+          fetchExperienceDetail(experienceId);
+        });
+      });
+
+      const fetchExperienceDetail = async (experienceId) => {
+        const folder = 'experience-detail';
+        const baseUrl = "https://api.github.com/repos/vibhor18/vibhor18.github.io/contents/";
+        const response = await fetch(`${baseUrl}${folder}/${experienceId}.md`);
+        const converter = new showdown.Converter({simpleLineBreaks: true, strikethrough: true, tables: true});
+        if (response.ok) {
+          const mdContent = await response.text();
+          const htmlContent = converter.makeHtml(mdContent);
+          document.getElementById('experience-detail-container').innerHTML = `
+            <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100">
+              ${htmlContent}
+            </div>
+          `;
+        } else {
+          document.getElementById('experience-detail-container').innerHTML = `
+            <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100">
+              <p>Details not available.</p>
+            </div>
+          `;
+        }
+      };
+    });
+    </script>
+{% endblock %}
