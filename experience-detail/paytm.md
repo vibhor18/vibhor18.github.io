@@ -1,36 +1,46 @@
-# Machine Learning Intern
-**Verzeo** 
-Feb 2020 – Mar 2020
+
+# Machine Learning and Automation Intern
+**Central Manufacturing Technology Institute**
+Jun 2021 – Sep 2021
 <br>
 
-**Exploratory Data Analysis (EDA):**
+**Simulation and Optimization:**
 <br>
 
-- **Python-Based Analytics:** Utilized Python libraries such as Pandas, NumPy, and Matplotlib to conduct in-depth exploratory data analysis (EDA) on datasets exceeding 100 GB.
+- **Reinforcement Learning for Robot Simulation:** Applied reinforcement learning techniques to simulate a universal robot on the Gazebo platform using Python. The virtual representation allowed for testing and optimizing the robot's movements, reducing the need for physical trials.
 
 
-- **Data-Driven Decision Making:** Enhanced data-driven decision-making efficiency by 10% through advanced analytics and insights derived from large datasets. Focused on identifying key trends and patterns to inform strategic decisions.
+- **Operational Efficiency:** Transformed manufacturing problems into software solutions, resulting in a 10% decrease in human error. The simulation enabled precise adjustments and validation of the robot's operations before real-world implementation.
 
-<br>
-
-**Breast Cancer Diagnosis Models:**
-<br>
-
-- **Classification Models:** Developed and analyzed classification models, including K-nearest neighbors (K-NN), Support Vector Machine (SVM), and Logistic Regression, using Scikit-learn to handle cytopathology data.
-
-
-- **Accuracy Improvement:** Achieved SVM’s highest accuracy rate of 97.2% for breast cancer diagnosis by fine-tuning hyperparameters and employing cross-validation techniques. Improved the reliability of medical diagnostic processes through rigorous model validation.
 
 <br>
 
-**Price Prediction Model:**
+**IoT-Based Predictive Maintenance System**
 <br>
 
-- **Regression Model:** Designed and implemented a linear regression model using Python's Scikit-learn for price prediction on GitHub’s Appstore games data. Applied feature selection techniques to identify the most impactful game features.
+- **Abrasive Flow Machine Automation:** Programmed an IoT-based predictive maintenance system for an abrasive flow machine with PLC integration. The system was designed to enhance the machine's reliability and reduce maintenance costs.
 
-- **Feature Analysis:** Analyzed game features as independent variables and app prices as dependent variables, leading to a 15% improvement in price prediction accuracy. Employed data preprocessing methods, such as normalization and encoding, to enhance model performance.
+
+- **Time Series Analysis:** Utilized time series analysis to monitor and automate the machine's functions, increasing reliability by 15%.
 
 <br>
 
-- **Outcome:** Gained extensive experience in applying machine learning techniques to real-world data analytics challenges. This role significantly improved my skills in Python programming, model development, and data analysis, contributing to better decision-making processes and predictive accuracy in various applications.
+**Automation and Process Improvement:**
+<br>
+
+- **Software Solutions for Manufacturing:** Developed use cases and data models to streamline manufacturing processes, leading to a 35% reduction in cycle time.
+
+- **Python:** Crafted software solutions to automate key manufacturing processes, significantly enhancing productivity and operational efficiency.
+<br>
+
+**Operational Monitoring and Reporting:**
+<br>
+
+- **Data Collection and Analysis:** Implemented data collection systems to monitor manufacturing operations continuously. Analyzed data to identify bottlenecks and optimize processes.
+
+- **Reporting:** Developed detailed reports to track performance improvements and provide actionable insights to management, ensuring continuous improvement in manufacturing efficiency.
+<br>
+
+- **Outcome:** Gained valuable experience in applying machine learning, IoT, and automation techniques to real-world manufacturing problems. This role enhanced my skills in Python programming, simulation, process optimization, and operational monitoring, contributing to improved productivity and efficiency in manufacturing operations.
 <!-- **[<i class="fa-solid fa-circle-info"></i> Learn More](../pages/experience.html)** -->
+
