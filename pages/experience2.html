@@ -8,45 +8,45 @@
   <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/vibhor18">
   <title>Vibhor Mechu</title>
   <style>
-.markdown-container img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-}
+    .markdown-container img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
 
-.markdown-container h2 {
-  font-weight: bold;
-}
+    .markdown-container h2 {
+      font-weight: bold;
+    }
 
-.markdown-container ul {
-  list-style-type: disc;
-  padding-left: 1.25rem;
-}
+    .markdown-container ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+    }
 
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
   </style>
 </head>
 <body class="dark-mode relative">
-<style>
-/* Add necessary dark mode styles for the footer */
-.dark-mode .bg-white.p-4.rounded.shadow-md.transition-colors.duration-200.hover\:bg-gray-100:hover {
-  background-color: #333333;
-}
-.dark-mode {
-  background-color: #1a1a1a;
-}
-.dark-mode footer,
-.dark-mode footer .text-gray-600 {
-  color: #f8f8f8;
-}
+  <style>
+    /* Add necessary dark mode styles for the footer */
+    .dark-mode .bg-white.p-4.rounded.shadow-md.transition-colors.duration-200.hover\:bg-gray-100:hover {
+      background-color: #333333;
+    }
+    .dark-mode {
+      background-color: #1a1a1a;
+    }
+    .dark-mode footer,
+    .dark-mode footer .text-gray-600 {
+      color: #f8f8f8;
+    }
     .dark-mode .text-white,
     .dark-mode .text-black,
     .dark-mode .text-gray-900,
@@ -66,7 +66,7 @@
     }
   </style>
   <div id="particles-js"></div>
-<nav class="p-4 flex flex-wrap items-center justify-between w-full px-2 md:px-4">
+  <nav class="p-4 flex flex-wrap items-center justify-between w-full px-2 md:px-4">
     <div>
       <span class="text-black font-bold"><a href="Files/Vibhor-Mechu_resume.pdf">Resume</a></span><span class="text-black"></span>
     </div>
@@ -104,26 +104,14 @@
       strikethrough: true,
       tables: true,
     });
-    const baseUrl = "https://api.github.com/repos/vibhor18/vibhor18.github.io/contents/";
-    const folders = ['experience-detail'];
+    const baseUrl = "https://api.github.com/repos/vibhor18/vibhor18.github.io/contents/experience-detail/";
 
-    async function fetchMarkdownFiles(folder) {
-      const response = await fetch(`${baseUrl}${folder}`);
-      const files = await response.json();
-      function shuffleArray(array) {
-          for (let i = array.length - 1; i > 0; i--) {
-              const j = Math.floor(0 * (i + 1));
-              [array[i], array[j]] = [array[j], array[i]];
-          }
-          return array[1];
-      }
+    async function fetchMarkdownFile(fileName) {
+      try {
+        const response = await fetch(`${baseUrl}${fileName}`);
+        const file = await response.json();
 
-      const randomFiles = shuffleArray(files);
-      const maxVisibleItems = folder === 'experience-detail' ? 5 : Infinity;
-      let itemCount = 0;
-
-      for (const file of randomFiles) {
-        if (file.name.endsWith('.md')) {
+        if (file && file.download_url) {
           const fileRes = await fetch(file.download_url);
           const mdContent = await fileRes.text();
           const mdWithLineBreaks = mdContent.replace(/\n/g, '  \n');
@@ -133,46 +121,23 @@
           const contentWithoutTitle = mdContent.replace(/^.+\n/, '');
           const htmlContentWithoutTitle = converter.makeHtml(contentWithoutTitle);
           const fileCard = `
-              <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
-                <h2 class="text-xl font-semibold mb-2">${title}</h2>
-                <div>${htmlContentWithoutTitle}</div>
-              </div>
+            <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
+              <h2 class="text-xl font-semibold mb-2">${title}</h2>
+              <div>${htmlContentWithoutTitle}</div>
+            </div>
           `;
 
-          if (itemCount < maxVisibleItems) {
-            if (folder === 'experience-detail') {
-              experienceList.innerHTML += fileCard;
-              experienceList.innerHTML += hiddenCard;
-            } 
-          }
-          itemCount++;
+          experienceList.innerHTML += fileCard;
+        } else {
+          console.error('File not found:', fileName);
         }
+      } catch (error) {
+        console.error('Error fetching file:', error);
       }
-
-    if (folder !== 'listening' && itemCount > maxVisibleItems) {
-      const container = folder === 'posts' ? postsList : folder === 'projects' ? projectsList : experienceList;
-      createShowMoreButton(container);
     }
-  }
 
-        const createShowMoreButton = (container) => {
-        const button = document.createElement('button');
-        button.innerHTML = '➕ Show More';
-        button.classList.add('show-more');
-        button.style.color = 'gray'; // Set the text color to gray
-        button.style.marginTop = '10px'; // Add some margin on top
-        container.after(button);
-
-        button.addEventListener('click', () => {
-            const hiddenItems = container.querySelectorAll('.hidden');
-            hiddenItems.forEach(item => item.classList.remove('hidden'));
-            button.remove();
-        });
-    };
-
-    folders.forEach(folder => {
-        fetchMarkdownFiles(folder);
-    });
+    // Specify the exact file you want to fetch
+    fetchMarkdownFile('paytm.md');
   </script>
   <script>
     particlesJS('particles-js', {
@@ -288,73 +253,73 @@
       duration: 5000,
     });
 
-const footer = document.createElement("footer");
-footer.className = "mt-8 mb-4";
-const footerContent = document.createElement("div");
-footerContent.className = "flex items-center justify-between";
-footer.appendChild(footerContent);
+    const footer = document.createElement("footer");
+    footer.className = "mt-8 mb-4";
+    const footerContent = document.createElement("div");
+    footerContent.className = "flex items-center justify-between";
+    footer.appendChild(footerContent);
 
-const copyright = document.createElement("div");
-copyright.className = "hidden md:flex";
-copyright.innerHTML = '&nbsp;&nbsp;&copy; ' + (new Date().getFullYear()) + ' Pratham Gupta';
-footerContent.appendChild(copyright);
+    const copyright = document.createElement("div");
+    copyright.className = "hidden md:flex";
+    copyright.innerHTML = '&nbsp;&nbsp;&copy; ' + (new Date().getFullYear()) + ' Pratham Gupta';
+    footerContent.appendChild(copyright);
 
-const madeWith = document.createElement("div");
-madeWith.className = "hidden md:flex";
-madeWith.innerHTML = 'Redesigned by Me - Template by &nbsp <a href="https://wilhelm.digital">Tobias Wilhelm</a>';
-footerContent.appendChild(madeWith);
+    const madeWith = document.createElement("div");
+    madeWith.className = "hidden md:flex";
+    madeWith.innerHTML = 'Redesigned by Me - Template by &nbsp <a href="https://wilhelm.digital">Tobias Wilhelm</a>';
+    footerContent.appendChild(madeWith);
 
-const elevatorBtnDiv = document.createElement("div");
-elevatorBtnDiv.innerHTML = 'You need an elevator ride?&nbsp;&nbsp;<i class="fas fa-elevator"></i>&nbsp;&nbsp;';
-elevatorBtnDiv.className = "text-center flex justify-center items-center cursor-pointer mt-4";
-elevatorBtnDiv.onclick = () => {
-  elevator.elevate();
-};
+    const elevatorBtnDiv = document.createElement("div");
+    elevatorBtnDiv.innerHTML = 'You need an elevator ride?&nbsp;&nbsp;<i class="fas fa-elevator"></i>&nbsp;&nbsp;';
+    elevatorBtnDiv.className = "text-center flex justify-center items-center cursor-pointer mt-4";
+    elevatorBtnDiv.onclick = () => {
+      elevator.elevate();
+    };
 
-footerContent.appendChild(elevatorBtnDiv);
-document.body.appendChild(footer);
+    footerContent.appendChild(elevatorBtnDiv);
+    document.body.appendChild(footer);
   </script>
-    <style>
-      @keyframes pulsate {
-        0% {
-          transform: scale(1);
-          opacity: 0.7;
-        }
-        50% {
-          transform: scale(1.2);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 0.7;
-        }
+  <style>
+    @keyframes pulsate {
+      0% {
+        transform: scale(1);
+        opacity: 0.7;
       }
-      #scroll-down-btn i {
-        animation: pulsate 1.5s linear infinite;
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
       }
-    </style>
-    <button id="scroll-down-btn" class="fixed bottom-4 left-1/2 text-black p-2 rounded shadow-md opacity-80 transition-colors duration-200 ease-in-out dark:bg-gray-800 dark:text-white">
-      <i class="fa-solid fa-v"></i>
-    </button>
-    <script>
-      const scrollDownBtn = document.getElementById('scroll-down-btn');
-      const headerContainer = document.getElementById('header-container');
-
-      const toggleScrollButtonVisibility = () => {
-        if (window.pageYOffset === 0) {
-          scrollDownBtn.style.display = 'flex';
-        } else {
-          scrollDownBtn.style.display = 'none';
-        }
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
       }
+    }
+    #scroll-down-btn i {
+      animation: pulsate 1.5s linear infinite;
+    }
+  </style>
+  <button id="scroll-down-btn" class="fixed bottom-4 left-1/2 text-black p-2 rounded shadow-md opacity-80 transition-colors duration-200 ease-in-out dark:bg-gray-800 dark:text-white">
+    <i class="fa-solid fa-v"></i>
+  </button>
+  <script>
+    const scrollDownBtn = document.getElementById('scroll-down-btn');
+    const headerContainer = document.getElementById('header-container');
 
-      scrollDownBtn.addEventListener('click', () => {
-        const yOffset = headerContainer.getBoundingClientRect().bottom + window.pageYOffset;
-        window.scrollTo({top: yOffset, behavior: 'smooth'});
-      });
+    const toggleScrollButtonVisibility = () => {
+      if (window.pageYOffset === 0) {
+        scrollDownBtn.style.display = 'flex';
+      } else {
+        scrollDownBtn.style.display = 'none';
+      }
+    }
 
-      window.addEventListener('scroll', toggleScrollButtonVisibility);
-      toggleScrollButtonVisibility();
-    </script>
+    scrollDownBtn.addEventListener('click', () => {
+      const yOffset = headerContainer.getBoundingClientRect().bottom + window.pageYOffset;
+      window.scrollTo({top: yOffset, behavior: 'smooth'});
+    });
+
+    window.addEventListener('scroll', toggleScrollButtonVisibility);
+    toggleScrollButtonVisibility();
+  </script>
 </body>
 </html>
