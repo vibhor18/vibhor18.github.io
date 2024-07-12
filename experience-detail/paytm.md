@@ -1,4 +1,3 @@
-
 # Machine Learning and Automation Intern
 **Central Manufacturing Technology Institute**
 Jun 2021 – Sep 2021
