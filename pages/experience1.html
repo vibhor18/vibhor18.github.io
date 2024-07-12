@@ -109,7 +109,7 @@
 
     async function fetchMarkdownFiles(folder) {
       const response = await fetch(`${baseUrl}${folder}`);
-      const file = await response.json()[0];
+      const file = await response.json();
 
       const maxVisibleItems = folder === 'experience-detail' ? 5 : Infinity;
 
