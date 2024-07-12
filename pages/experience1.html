@@ -111,9 +111,13 @@
       const response = await fetch(`${baseUrl}${folder}`);
       const file = await response.json();
 
+      const specificFileName = 'ampviv.md';
+      
+      const specificItem = data.find(file => file.name === specificFileName);
+
       const maxVisibleItems = folder === 'experience-detail' ? 5 : Infinity;
 
-        if (file.name.endsWith('.md')) {
+        if (specificItem.name.endsWith('.md')) {
             const fileRes = await fetch(file.download_url);
             const mdContent = await fileRes.text();
             const mdWithLineBreaks = mdContent.replace(/\n/g, '  \n');
