@@ -16,13 +16,7 @@
       document.addEventListener("DOMContentLoaded", () => {
       const experienceItems = document.querySelectorAll(".experience-item");
       fetchExperienceDetail(0);
-    //   experienceItems.forEach(item => {
-    //     item.addEventListener("click", () => {
-    //       const experienceId = item.id;
-    //       fetchExperienceDetail(experienceId);
-    //     });
-    //   });
-
+      
       const fetchExperienceDetail = async (experienceId) => {
         const folder = 'experience-detail';
         const baseUrl = "https://api.github.com/repos/vibhor18/vibhor18.github.io/contents/";
