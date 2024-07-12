@@ -108,7 +108,7 @@
       const experienceItems = document.querySelectorAll(".experience-item");
       experienceItems.forEach(item => {
         item.addEventListener("click", () => {
-          const experienceId = item.id;
+          const experienceId = item.getAttribute('data-id');
           fetchExperienceDetail(experienceId);
         });
       });
@@ -173,17 +173,20 @@
           const title = mdContent.split('\n')[0].replace(/^#+\s*/, '');
           const contentWithoutTitle = mdContent.replace(/^.+\n/, '');
           const htmlContentWithoutTitle = converter.makeHtml(contentWithoutTitle);
+          const experienceId = file.name.replace('.md', '');
           const fileCard = `
               <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
                 <h2 class="text-xl font-semibold mb-2">${title}</h2>
                 <div>${htmlContentWithoutTitle}</div>
+                <button class="read-more" data-id="${experienceId}">Read More</button>
               </div>
           `;
 
           if (itemCount < maxVisibleItems) {
             if (folder === 'experience-detail') {
               experienceList.innerHTML += fileCard;
-            } 
+            } else {
+          experienceList.innerHTML += `<div class="hidden">${fileCard}</div>`;
           }
           itemCount++;
         }
