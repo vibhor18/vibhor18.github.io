@@ -116,22 +116,22 @@
       const fetchExperienceDetail = async (experienceId) => {
         const folder = 'experience-detail';
         const baseUrl = "https://api.github.com/repos/vibhor18/vibhor18.github.io/contents/";
-        const response = await fetch(`${baseUrl}${folder}/${experienceId}.md`);
+        const response = await fetch(${baseUrl}${folder}/${experienceId}.md);
         const converter = new showdown.Converter({simpleLineBreaks: true, strikethrough: true, tables: true});
         if (response.ok) {
           const mdContent = await response.text();
           const htmlContent = converter.makeHtml(mdContent);
-          document.getElementById('experience-detail-container').innerHTML = `
+          document.getElementById('experience-detail-container').innerHTML = 
             <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100">
               ${htmlContent}
             </div>
-          `;
+          ;
         } else {
-          document.getElementById('experience-detail-container').innerHTML = `
+          document.getElementById('experience-detail-container').innerHTML = 
             <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100">
               <p>Details not available.</p>
             </div>
-          `;
+          ;
         }
       };
     });
@@ -149,7 +149,7 @@
     const folders = ['experience-detail'];
 
     async function fetchMarkdownFiles(folder) {
-      const response = await fetch(`${baseUrl}${folder}`);
+      const response = await fetch(${baseUrl}${folder});
       const files = await response.json();
       function shuffleArray(array) {
           for (let i = array.length - 1; i > 0; i--) {
@@ -214,7 +214,6 @@
     folders.forEach(folder => {
         fetchMarkdownFiles(folder);
     });
-
   </script>
   <script>
     particlesJS('particles-js', {
