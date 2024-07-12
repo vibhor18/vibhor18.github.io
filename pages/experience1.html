@@ -109,45 +109,34 @@
 
     async function fetchMarkdownFiles(folder) {
       const response = await fetch(`${baseUrl}${folder}`);
-      const files = await response.json();
-      function shuffleArray(array) {
-          for (let i = array.length - 1; i > 0; i--) {
-              const j = Math.floor(0 * (i + 1));
-              [array[i], array[j]] = [array[j], array[i]];
-          }
-          return array[0];
-      }
+      const file = await response.json()[0];
 
-      const randomFiles = shuffleArray(files);
       const maxVisibleItems = folder === 'experience-detail' ? 5 : Infinity;
-      let itemCount = 0;
 
-      for (const file of randomFiles) {
         if (file.name.endsWith('.md')) {
-          const fileRes = await fetch(file.download_url);
-          const mdContent = await fileRes.text();
-          const mdWithLineBreaks = mdContent.replace(/\n/g, '  \n');
-          const htmlContent = converter.makeHtml(mdWithLineBreaks);
+            const fileRes = await fetch(file.download_url);
+            const mdContent = await fileRes.text();
+            const mdWithLineBreaks = mdContent.replace(/\n/g, '  \n');
+            const htmlContent = converter.makeHtml(mdWithLineBreaks);
 
-          const title = mdContent.split('\n')[0].replace(/^#+\s*/, '');
-          const contentWithoutTitle = mdContent.replace(/^.+\n/, '');
-          const htmlContentWithoutTitle = converter.makeHtml(contentWithoutTitle);
-          const fileCard = `
-              <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
+            const title = mdContent.split('\n')[0].replace(/^#+\s*/, '');
+            const contentWithoutTitle = mdContent.replace(/^.+\n/, '');
+            const htmlContentWithoutTitle = converter.makeHtml(contentWithoutTitle);
+            const fileCard = `
+                <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
                 <h2 class="text-xl font-semibold mb-2">${title}</h2>
                 <div>${htmlContentWithoutTitle}</div>
-              </div>
-          `;
+                </div>
+            `;
 
-          if (itemCount < maxVisibleItems) {
+            if (itemCount < maxVisibleItems) {
             if (folder === 'experience-detail') {
-              experienceList.innerHTML += fileCard;
-              experienceList.innerHTML += hiddenCard;
+                experienceList.innerHTML += fileCard;
+                experienceList.innerHTML += hiddenCard;
             } 
-          }
-          itemCount++;
+            }
+            itemCount++;
         }
-      }
 
     if (folder !== 'listening' && itemCount > maxVisibleItems) {
       const container = folder === 'posts' ? postsList : folder === 'projects' ? projectsList : experienceList;
