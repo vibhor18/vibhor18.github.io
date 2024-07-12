@@ -15,12 +15,13 @@
 
       document.addEventListener("DOMContentLoaded", () => {
       const experienceItems = document.querySelectorAll(".experience-item");
-      experienceItems.forEach(item => {
-        item.addEventListener("click", () => {
-          const experienceId = item.id;
-          fetchExperienceDetail(experienceId);
-        });
-      });
+      fetchExperienceDetail(0);
+    //   experienceItems.forEach(item => {
+    //     item.addEventListener("click", () => {
+    //       const experienceId = item.id;
+    //       fetchExperienceDetail(experienceId);
+    //     });
+    //   });
 
       const fetchExperienceDetail = async (experienceId) => {
         const folder = 'experience-detail';
