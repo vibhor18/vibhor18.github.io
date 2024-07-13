@@ -43,11 +43,14 @@
 
 .education-item {
   width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .education-container img {
-  max-width: 100px;
-  margin: 0 auto;
+  height: 100px; /* Set a fixed height for the images */
+  margin: 0 auto 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
@@ -55,10 +58,12 @@
 .education-container h3 {
   font-weight: bold;
   color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
 .education-container p {
   color: #d1d1d1;
+  margin: 0;
 }
 
   </style>
@@ -141,14 +146,14 @@
     <div id="education-container" class="w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
       <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
       <h4 class="text-sm italic mb-4">My academic journey</h4>
-      <div class="education-container flex justify-between items-center">
-        <div class="education-item text-center">
+      <div class="education-container">
+        <div class="education-item">
           <img src="NYU-Logo.png" alt="College Logo 1" />
           <h3 class="text-xl mt-4 text-white">Master of Science in Computer Science</h3>
           <p class="text-gray-400">New York University, USA</p>
           <p class="text-gray-400">2023 - 2025</p>
         </div>
-        <div class="education-item text-center">
+        <div class="education-item">
           <img src="Manipal_University_Jaipur_logo.png" alt="College Logo 2" />
           <h3 class="text-xl mt-4 text-white">Bachelor of Technology in Electronics and Communication Engineering</h3>
           <p class="text-gray-400">Manipal University Jaipur, India</p>
