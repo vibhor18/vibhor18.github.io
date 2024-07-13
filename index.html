@@ -32,6 +32,23 @@
   height: 100%;
   z-index: -1;
 }
+
+.education-container img {
+      max-width: 150px;
+      margin: 0 auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+    .education-container h3 {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .education-container p {
+      text-align: center;
+    }
+    
   </style>
 </head>
 <body class="dark-mode relative">
@@ -106,6 +123,23 @@
       <h4 class="text-sm italic mb-4">Discover what I do in my spare time</h4>
       <div id="projects-list" class="gap-4 flex-wrap">
         <!-- Fetched Projects Markdown files will be displayed here -->
+      </div>
+    </div>
+
+    <div id="education-container" class="w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+      <h4 class="text-sm italic mb-4">My academic journey</h4>
+      <div class="education-container flex flex-col items-center space-y-4">
+        <div class="flex flex-col items-center">
+          <img src="path/to/college-logo1.png" alt="College Logo 1" />
+          <h3 class="text-xl mt-4">Master of Science in Computer Science</h3>
+          <p>New York University, 2023 - 2025</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="path/to/college-logo2.png" alt="College Logo 2" />
+          <h3 class="text-xl mt-4">Bachelor of Technology in Computer Science</h3>
+          <p>IIIT Delhi, 2019 - 2023</p>
+        </div>
       </div>
     </div>
 
