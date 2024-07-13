@@ -66,6 +66,15 @@
   margin: 0;
 }
 
+.contact-container {
+  margin-top: 2rem;
+}
+
+.contact-container p {
+  margin: 0.5rem 0;
+}
+
+
   </style>
 </head>
 <body class="dark-mode relative">
@@ -184,10 +193,12 @@
         toggleBtn.innerText = isDarkModeOn ? "☀️" : "🌓";
       });
     </script>
-    <div id="listening-container" class="w-full px-4 py-5">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fab fa-linkedin"></i> What's on my LinkedIn</h3>
-      <div id="listening-list" class="flex flex-wrap mx-auto md:-mx-2 md:space-x-4">
-        <!-- Fetched Listening Markdown files will be displayed here -->
+    <div id="contact-container" class="w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-envelope"></i> Contact</h3>
+      <h4 class="text-sm italic mb-4">How to reach me</h4>
+      <div class="contact-container text-center">
+        <p class="text-xl text-white">Email: <a href="mailto:vm2491@nyu.edu" class="text-pink-600">vm2491@nyu.edu</a></p>
+        <p class="text-xl text-white">Location: Brooklyn, New York</p>
       </div>
     </div>
   </div>
