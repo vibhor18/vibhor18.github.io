@@ -74,10 +74,15 @@
   margin: 0.5rem 0;
 }
 
+.section-container {
+  margin-bottom: 2rem; /* Adjust this value as needed for the desired spacing */
+}
+
+
 
   </style>
 </head>
-<body class="dark-mode relative" style="padding: 5rem;">
+<body class="dark-mode relative" style="padding: 1rem;">
 <style>
 /* Add necessary dark mode styles for the footer */
 .dark-mode .bg-white.p-4.rounded.shadow-md.transition-colors.duration-200.hover\:bg-gray-100:hover {
@@ -135,7 +140,7 @@
   </div>
   <div id="content-container" class="flex flex-col md:flex-row w-full flex-wrap mt-6 mb-20 mx-1 md:mx-0">
 
-    <div id="experience-container" class="w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+    <div id="experience-container" class="section-container w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
       <h1 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-briefcase"></i> Experience</h3>
       <h3 class="text-sm italic mb-4">Take a look at what I have done in the past</h4>
       <div id="experience-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-wrap">
@@ -144,7 +149,7 @@
     </div>
   <br>
   <br>
-    <div id="projects-container" class="w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+    <div id="projects-container" class="section-container w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
       <h1 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-code"></i> Projects</h3>
       <h3 class="text-sm italic mb-4">Discover what I do in my spare time</h4>
       <div id="projects-list" class="gap-4 flex-wrap">
@@ -152,7 +157,7 @@
       </div>
     </div>
 
-    <div id="education-container" class="w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+    <div id="education-container" class="section-container w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
       <h1 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
       <h3 class="text-sm italic mb-4">My academic journey</h4>
       <div class="education-container">
@@ -193,7 +198,7 @@
         toggleBtn.innerText = isDarkModeOn ? "☀️" : "🌓";
       });
     </script>
-    <div id="contact-container" class="w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+    <div id="contact-container" class="section-container w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
       <h1 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-envelope"></i> Contact</h3>
       <h3 class="text-sm italic mb-4">How to reach me</h4>
       <div class="contact-container text-center">
